@@ -1,0 +1,276 @@
+*
+{
+	margin:0;
+}
+body{
+	background: #02010a;
+	color: black;
+  font-family: 'Dancing Script', cursive;
+}
+#contenido
+{
+	width: 900px;
+	margin: 0 auto;
+}
+header{
+	width: 96%;
+	margin: 0 auto;
+	font-size: 2.5vw;
+	padding: 2%;
+	background-color: #5b7989;
+	color:white;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
+}
+#titEncabezado{
+  float: left;
+  text-shadow: 2px 2px 2px #02010A;
+}
+#enlaces{
+  float: right;
+}
+#enlaces a{
+	font-size: 1.5vw;
+	color: white;
+	margin: 1vw;
+}
+#enlaces a#enlace1{
+	text-decoration: none;
+}
+figure{
+	box-sizing: border-box;
+	float:left;
+	text-align: center;
+	height: 400px;
+}
+figure .imagen1{
+   width: 70%;
+}
+figure .imagen2, .imagen3{
+	width: 80%;
+}
+p{
+	text-decoration: underline;
+	font-size: 1.4em;
+}
+#columna1{
+	background-color: #82c3a6;
+	width: 100%;
+	padding-top: 5%;
+}
+#contenidoInt{
+	display: flex;
+	flex-direction: column;
+}
+#columna2{
+	background-color: #d5c75f;
+}
+figure [class*="imagen"]{
+	border: 2px solid;
+	-webkit-filter:drop-shadow(2px 2px 2px #02010a);
+	filter:drop-shadow(2px 2px 2px #02010a);
+}
+/*-----------  animaciones  ----------
+  -----------  rotación  ------------- */
+@keyframes	rotacionAnimacion {
+		0% {
+			transform:rotateZ(0deg);
+			border: 0px solid;
+			-webkit-filter:drop-shadow(0px 0px 0px #82c3a6);
+			filter:drop-shadow(0px 0px 0px #82c3a6);
+		}
+		50% {
+			transform:rotateZ(10deg);
+			border: 2px solid;
+			-webkit-filter:drop-shadow(5px 5px 5px #82c3a6);
+			filter:drop-shadow(5px 5px 5px #82c3a6);
+		}
+		100%{
+			transform:rotateZ(0deg);
+			border: 0px solid;
+			-webkit-filter:drop-shadow(0px 0px 0px #82c3a6);
+			filter:drop-shadow(0px 0px 0px #82c3a6);
+		}
+	}
+#columna2 img:hover{
+	animation-name: rotacionAnimacion;
+	animation-duration: 1s;
+}
+#columna3{
+	background-color: #d5c75f;
+	width: 50%;
+	padding-top: 9%;
+}
+/*----------  Desplazamiento  ----------*/
+@keyframes	trasladarAnimacion {
+		0% {
+			transform:translate3d(0px, 0px, 0px);
+			border: 0px solid;
+			-webkit-filter:drop-shadow(0px 0px 0px #82c3a6);
+			filter:drop-shadow(0px 0px 0px #82c3a6);
+		}
+		50% {
+			transform:translate3d(20px, -5px, 0px);
+			border: 2px solid;
+			-webkit-filter:drop-shadow(5px 5px 5px #82c3a6);
+			filter:drop-shadow(5px 5px 5px #82c3a6);
+		}
+		100%{
+			transform:translate3d(0px, 0px, 0px);
+			border: 0px solid;
+			-webkit-filter:drop-shadow(0px 0px 0px #82c3a6);
+			filter:drop-shadow(0px 0px 0px #82c3a6);
+		}
+ }
+ #columna3 img:hover{
+ 	animation-name: trasladarAnimacion;
+ 	animation-duration: 1s;
+ }
+ /*----------  Slidein  ----------*/
+ @keyframes	slideAnimacion {
+	 0%{
+		 margin-top: 150%;
+	 }
+	 60%{
+		 margin-top: -5%;
+	 }
+	 100%{
+		 margin-top: 0%;
+	 }
+ }
+ header{
+	 animation-name:slideAnimacion;
+	 animation-duration: 1s;
+ }
+ /* ------------------------------------*/
+
+footer{
+	padding: 2%;
+	background-color: #C6d5c5;
+	color:black;
+  -webkit-border-radius: 0 0 10px 10px;
+  -moz-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+}
+.contenedor1, .contenedor2, .contenedor3 {
+	display: flex;
+	flex-direction: row;
+}
+footer .contenedor3 > div {
+	text-align: center;
+	margin: 2%;
+}
+div [class*="bloq"]{
+	text-align: left !important;
+}
+.ico{
+	width: 1.5vh;
+}
+
+/*----------  configuracion para PC-Desktop  ----------*/
+
+@media only screen and (max-width:2560px){
+	#contenido {
+		width: 100%;
+	}
+	section{
+		padding:1vh;
+	}
+	header {
+		width: 96%;
+		height: 50%;
+		font-size: 4vw;
+	}
+	#enlaces a{
+		font-size: 3vw;
+		margin: 1vw;
+	}
+	#columna1{
+		padding: 3vh;
+		height: auto;
+	}
+  #columna1 img{
+		width: 100%;
+  }
+  .iamgen2, .imagen3{
+		width: 100%;
+  }
+  #columna2{
+		width: 100%;
+		height: auto;
+		padding-top: 9vw;
+  }
+  #columna3{
+		width: 100%;
+		height: auto;
+		padding: 6vw;
+  }
+	footer .contenedor3 > div{
+		width: 90%;
+		margin: 1vw;
+	}
+  .contenedor3{
+		font-size: 2vw;
+  }
+	.ico{
+	  width: 2vw;
+	}
+}
+
+/*----------  Configuracion para dispositivos moviles  ----------*/
+
+@media only screen and (max-width: 500px) {
+	#contenido {
+		width: 100%;
+	}
+	header {
+		display: flex;
+		flex-direction: column;
+		font-size: 4vh;
+		width: 96%;
+		height: 50%;
+		text-align: center;
+	}
+  #enlaces a{
+		font-size: 2.5vh;
+		color: white;
+		margin: 2vw;
+  }
+  #enlaces a#enlace1{
+		text-decoration: none;
+  }
+	#columna1{
+		padding: 9.5%;
+		height: auto;
+	}
+	#columna1 img{
+		width: 100%;
+	}
+	.contenedor2,.contenedor3{
+		display: flex;
+		flex-direction: column;
+	}
+	.iamgen2, .imagen3{
+		width: 100%;
+	}
+	.contenedor3{
+		padding-left: 6vw;
+	}
+	#columna2{
+		height: auto;
+	}
+	#columna3{
+		/*padding: 5vh;*/
+		width: 100%;
+		height: auto;
+		padding: 9.5%;
+	}
+	div [class*="bloq"]{
+	 text-align: left !important;
+	 font-size: 4vw;
+	}
+	.ico{
+	  width: 4vw;
+	}
+}
